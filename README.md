@@ -16,7 +16,7 @@ view(bris_clin)
 
 overal_plot <- ggplot(bris_clin_all, aes(x=groupA, y=MIC_all, fill_factor(ab)))+
 geom_boxplot(fill=('white'))+
-geom_dotplot(binaxis = 'y', stackkdir = 'center', dotsize = 0.8, stackratio = 0.4)+
+geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = 0.8, stackratio = 0.4)+
 labs(x="Isolate location", y="Minimum Inhibitory Concentration")+
 theme_bw()
 overal_plot
@@ -45,7 +45,7 @@ overal_plot
 
 >Apologies for the weird y axis formatting in the above code - it is because i added a space into the header of the brisclin1.txt file, so the axis has to be defined in a slightly different way (to get around this, simply remove the space and replace with _ or something similar).
 
->**Do examine the statistics of the data - i was simply using an ANOVA.**
+>**To examine the statistics of the data - i was simply using an ANOVA.**
 
 ```R
 cipro_resist <- aov(bris_clin$`MIC cipro` ~ bris_clin$groupZ)
