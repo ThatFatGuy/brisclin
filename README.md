@@ -14,7 +14,7 @@ library(data.table)
 bris_clin_all <- data.table::fread("~/path/to/file/brisclin.txt")
 view(bris_clin)
 
-overal_plot <- ggplot(bris_clin_all, aes(x=groupA, y=MIC_all, fill_factor(ab)))+
+overal_plot <- ggplot(bris_clin_all, aes(x=groupA, y=MIC_all, fill=factor(ab)))+
 geom_boxplot(fill=('white'))+
 geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = 0.8, stackratio = 0.4)+
 labs(x="Isolate location", y="Minimum Inhibitory Concentration")+
